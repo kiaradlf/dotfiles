@@ -3,6 +3,9 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_auth
 ssh-add ~/.ssh/id_sign
 
+# load docker group
+newgrp docker
+
 # load packages
 export SHELL=fish
 nix-shell -p helix gh nushell zoxide lazygit fish zsh ripgrep fd just any-nix-shell bat docker-compose poetry \
