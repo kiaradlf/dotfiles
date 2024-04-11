@@ -1,17 +1,15 @@
-# load ssh keys
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_auth
-ssh-add ~/.ssh/id_sign
-
 # load docker group
-newgrp docker
+group=docker
+if [ $(id -gn) != $group ]; then
+  newgrp docker
+  exit 0
+fi
 
-# load packages
-export SHELL=fish
-nix-shell -p helix gh nushell zoxide lazygit fish zsh ripgrep fd just any-nix-shell bat docker-compose poetry \
-  --command 'fish -f fish_vi_key_bindings'
+# load ssh keys
+eval "$(ssh-agent -s)" > /dev/null
+ssh-add ~/.ssh/id_auth 2> /dev/null
+ssh-add ~/.ssh/id_sign 2> /dev/null
 
-# # use nushell
-# export SHELL=nu
-# $SHELL
-# set -o vi
+# load zsh
+export SHELL=zsh
+$SHELL
