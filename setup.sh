@@ -30,6 +30,7 @@ sudo apt-get install -y gnome-keyring
 sudo apt-get install -y python3-pip python3-dev python3-venv build-essential libssl-dev libffi-dev
 sudo apt-get install -y pkg-config
 
+# make poetry put its files in a place accessible by chromeos
 nix-shell -p poetry --command poetry config virtualenvs.in-project true
 
 # initialize zoxide
@@ -42,3 +43,6 @@ chmod 0600 ~/.ssh/*
 
 # source .bash_profile so i can add to that instead
 echo ". $HOME/.bash_profile" >> ~/.bashrc
+
+# install basic command-line utilities
+nix-env -i helix gh nushell zoxide lazygit ripgrep fd any-nix-shell bat
