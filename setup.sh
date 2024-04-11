@@ -45,4 +45,4 @@ chmod 0600 ~/.ssh/*
 echo ". $HOME/.bash_profile" >> ~/.bashrc
 
 # install basic command-line utilities
-nix-env -i helix gh nushell zoxide lazygit ripgrep fd any-nix-shell bat
+nix-env -i helix gh lazygit ripgrep fd any-nix-shell bat nushell fish zsh zoxide
