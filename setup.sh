@@ -39,3 +39,6 @@ nix-shell -p zoxide --command 'zoxide init fish | source'
 mkdir -p ~/.ssh
 cp /mnt/chromeos/MyFiles/Downloads/ssh/* ~/.ssh/
 chmod 0600 ~/.ssh/*
+
+# source .bash_profile so i can add to that instead
+echo ". $HOME/.bash_profile" >> ~/.bashrc
