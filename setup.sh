@@ -19,3 +19,8 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plug
 
 # initialize zoxide
 nix-shell -p zoxide --command 'zoxide init fish | source'
+
+# add ssh keys from gist
+mkdir -p ~/.ssh
+cp /mnt/chromeos/MyFiles/Downloads/ssh/* ~/.ssh/
+chmod 0600 ~/.ssh/*
