@@ -17,6 +17,14 @@ echo \
 sudo apt-get update
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
+# install vscode: https://code.visualstudio.com/blogs/2020/12/03/chromebook-get-started
+sudo apt-get update
+sudo apt-get install -y gnome-keyring
+# manually open vscode .deb
+
+# install python
+sudo apt-get install -y python3-pip python3-dev python3-venv build-essential libssl-dev libffi-dev
+
 # initialize zoxide
 nix-shell -p zoxide --command 'zoxide init fish | source'
 
