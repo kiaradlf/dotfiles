@@ -17,10 +17,5 @@ echo \
 sudo apt-get update
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
-# add existing ssh keys
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_auth
-ssh-add ~/.ssh/id_sign
-
 # initialize zoxide
 nix-shell -p zoxide --command 'zoxide init fish | source'
