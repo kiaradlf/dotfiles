@@ -50,3 +50,4 @@ nix-env -i helix gh lazygit ripgrep fd any-nix-shell bat nushell fish zsh zoxide
 # set git identity
 git config --global user.email "kiara@datalab.nl"
 git config --global user.name "Kiara Grouwstra"
+git config --global push.autoSetupRemote true
