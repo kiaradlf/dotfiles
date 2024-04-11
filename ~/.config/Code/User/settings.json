@@ -1,8 +1,8 @@
 {
   "terminal.integrated.profiles.linux": {
     "bash": {
-      "path": "bash",
-      "args": ["-l"]
+      "path": "/usr/bin/rbash",
+      "args": ["--login"]
     }
   }
 }
