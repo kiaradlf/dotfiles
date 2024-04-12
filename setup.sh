@@ -45,7 +45,7 @@ chmod 0600 ~/.ssh/*
 echo ". $HOME/.bash_profile" >> ~/.bashrc
 
 # install basic command-line utilities
-nix-env -i helix gh lazygit ripgrep fd any-nix-shell bat nushell fish zsh zoxide poetry
+nix-env -i helix gh lazygit ripgrep fd any-nix-shell bat nushell fish zsh zoxide poetry tealdeer jaq yq
 
 # set git identity
 git config --global user.email "kiara@datalab.nl"
