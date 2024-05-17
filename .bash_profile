@@ -11,5 +11,5 @@ ssh-add ~/.ssh/id_auth 2> /dev/null
 ssh-add ~/.ssh/id_sign 2> /dev/null
 
 # load zsh
-export SHELL=zsh
-$SHELL
+# export SHELL=zsh
+# $SHELL
