@@ -29,6 +29,8 @@ sudo apt-get install -y gnome-keyring direnv
 # install python
 sudo apt-get install -y python3-pip python3-dev python3-venv build-essential libssl-dev libffi-dev
 sudo apt-get install -y pkg-config
+# work around error `externally-managed-environment`
+sudo mv /usr/lib/python3.11/EXTERNALLY-MANAGED /usr/lib/python3.11/EXTERNALLY-MANAGED.old
 
 # make poetry put its files in a place accessible by chromeos
 nix-shell -p poetry --command poetry config virtualenvs.in-project true
